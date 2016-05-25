@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Radix Converter</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='RadixConverter.css' />
+  <meta charset='utf-8' />
+</head>
+<body>
+  <header>
+    <h1>Radix Converter</h1>
+  </header>
+  <label for='main-input'>
+    Enter a Base <input id='main-input-base' type='number' min='2' max='32' value='10' /> number here:
+    <input id='main-input' type='text' pattern='[0-9]'/>
+  </label>
+  <label for='bases-input'>
+    Bases to show:
+    <input  id='bases-input' type='text' value='10,2' />
+  </label>
+  <label for='columns-input'>
+    Columns to show:
+    <input  id='columns-input' type='number' min='2' value='10' />
+  </label>
+  <label for='auto-columns'>
+    Auto-set columns?
+    <input  id='auto-columns' type='checkbox' checked />
+  </label>
+  <main></main>
+  <script src='RadixConverter.js'></script>
+  <script>window.radixConverter = new RadixConverter('main');</script>
+</body>
+</html>

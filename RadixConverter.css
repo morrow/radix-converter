@@ -1,0 +1,117 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family:'open sans';
+  text-align:center;
+  padding-bottom:2em;
+}
+
+header {
+  background:#09f;
+  padding:1em;
+  color:white;
+}
+
+header h1 {
+  text-align:left;
+}
+
+h1, h2, h3 {
+	text-align:center;
+  margin:0;
+  padding:0;
+}
+
+h1 { font-size:2em; }
+h2 { font-size:1.5em; }
+h3 { font-size: 1.25em; }
+
+[for=main-input] {
+  display:block;
+  margin:1em auto;
+}
+
+[for=columns-input]{
+  margin-left:3em;
+  margin-right:3em;
+}
+
+#columns-input {
+  padding:0.5em;
+  width:3em;
+}
+
+#main-input {
+  margin:2em 1em;
+  padding:0.2em;
+  font-size:1.25em;
+  text-align:center;
+  border:0.1em solid black;
+}
+
+#main-input-base {
+  width:2.5em;
+  text-align:left;
+  padding:0.5em 0 0.5em 1em;
+  font-weight:bold;
+  border:none;
+  border-bottom:2px solid black;
+  border-radius:0px;
+}
+
+section {
+  border:1px solid #ccc;
+	background:#eee;
+  margin:1em;
+  padding-bottom:3em;
+  display:inline-block;
+}
+
+section h2 {
+  background:#333;
+  color:white;
+  padding:0.5em;
+}
+
+section.current h2 {
+    background:rgb(70,200,70);
+}
+
+table {
+ margin:1em;
+ min-width:510px;
+}
+
+table input {
+  width:6em;
+  height:2em;
+  text-align:center;
+  font-size:1em;
+}
+
+table input[value=' ']{
+  opacity:0.25;
+}
+
+td {
+ text-align:center;
+}
+
+.result {
+ 	text-align: center;
+  margin:0 1em;
+  height:1em;
+  padding:0.5em;
+}
+
+.result input {
+  display:block;
+  font-weight:bold;
+  margin:0 auto;
+  padding:0.2em;
+  text-align:center;
+  font-size:1em;
+ }

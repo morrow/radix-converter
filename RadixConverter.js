@@ -67,7 +67,7 @@ RadixConverter.prototype.attachEventListeners = function(){
     if(this.value == '' || this.value.match(new RegExp(this.pattern, 'g')) && this.value.length == this.value.match(new RegExp(this.pattern, 'g')).length){
       this.style.borderColor = '';
       if(this.value != '' && document.querySelector('#auto-columns').checked){
-        document.querySelector('#columns-input').value = parseInt(this.value, self.main_input_base).toString(self.bases.sort().reverse()[0]).length;
+        document.querySelector('#columns-input').value = Math.max(5, parseInt(this.value, self.main_input_base).toString(self.bases.sort().reverse()[0]).length);
         document.querySelector('#columns-input').oninput();
       }
       self.calculateResults();
@@ -157,7 +157,7 @@ RadixConverter.prototype.createTables = function(){
     section.appendChild(h2);
     var table = document.createElement('table');
     table.setAttribute('data-base', base);
-    table.style.minWidth = self.column_count * 120 + 'px';
+    section.style.width =  self.column_count * 75 + 'px';
     // create rows
     var tr_multiplier = document.createElement('tr');
     tr_multiplier.className = 'multiplier';
@@ -176,7 +176,11 @@ RadixConverter.prototype.createTables = function(){
     // add tds to rows
     for(var i = 0; i < self.column_count; i++){
       tr_multiplier.appendChild(createTd('' + base + '<sup>' + ((self.column_count - 1) - i) + '</sup><div>×</div>'));
-      tr_input.appendChild(createTd('<input type="text" />'));
+      if(i > 0){
+        tr_input.appendChild(createTd('&nbsp; <input type="text" />'));
+      } else {
+        tr_input.appendChild(createTd('<input type="text" />'));
+      }
       tr_equals.appendChild(createTd('='));
       if(i > 0){
         tr_output.appendChild(createTd('+ <input type="text" />'));
@@ -193,7 +197,7 @@ RadixConverter.prototype.createTables = function(){
     var result = document.createElement('div');
     result.id = 'base-' + base + '-result';
     result.className = 'result';
-    result.innerHTML = "=<input type='text' size='32' />";
+    result.innerHTML = "=<input type='text' />";
     section.appendChild(result);
     self.outputElement.appendChild(section);
   });

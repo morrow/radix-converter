@@ -9,6 +9,16 @@ body {
   padding-bottom:2em;
 }
 
+h1, h2, h3 {
+	text-align:center;
+  margin:0;
+  padding:0;
+}
+
+h1 { font-size:2em; }
+h2 { font-size:1.5em; }
+h3 { font-size: 1.25em; }
+
 header {
   background:#09f;
   padding:1em;
@@ -19,15 +29,22 @@ header h1 {
   text-align:left;
 }
 
-h1, h2, h3 {
-	text-align:center;
-  margin:0;
-  padding:0;
+header a {
+  float:right;
+  margin-top:-3em;
+  margin-right:2em;
+  color:black;
+  font-weight:bold;
+  text-decoration:none;
+  background:url(github.png) 10px 10px transparent no-repeat;
+  padding:1em;
+  padding-left:42px;
+  border-radius:6px;
 }
 
-h1 { font-size:2em; }
-h2 { font-size:1.5em; }
-h3 { font-size: 1.25em; }
+header a:hover {
+  background:url(github.png) 10px 10px rgba(255,255,255,0.25) no-repeat;
+}
 
 [for=main-input] {
   display:block;
@@ -65,9 +82,9 @@ h3 { font-size: 1.25em; }
 section {
   border:1px solid #ccc;
 	background:#eee;
-  margin:1em;
+  margin:1em auto;
   padding-bottom:3em;
-  display:inline-block;
+  display:block;
 }
 
 section h2 {
@@ -81,12 +98,11 @@ section.current h2 {
 }
 
 table {
- margin:1em;
- min-width:510px;
+ margin:1em auto;
 }
 
 table input {
-  width:6em;
+  width:3em;
   height:2em;
   text-align:center;
   font-size:1em;
@@ -114,4 +130,6 @@ td {
   padding:0.2em;
   text-align:center;
   font-size:1em;
+  width:60%;
+  max-width:50vw;
  }

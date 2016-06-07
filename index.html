@@ -9,10 +9,11 @@
 <body>
   <header>
     <h1>Radix Converter</h1>
+    <a href='https://github.com/morrow/radix-converter' target='_blank'>Github</a>
   </header>
   <label for='main-input'>
     Enter a Base <input id='main-input-base' type='number' min='2' max='32' value='10' /> number here:
-    <input id='main-input' type='text' pattern='[0-9]'/>
+    <input id='main-input' type='text' pattern='[0-9]' autofocus/>
   </label>
   <label for='bases-input'>
     Bases to show:
@@ -20,7 +21,7 @@
   </label>
   <label for='columns-input'>
     Columns to show:
-    <input  id='columns-input' type='number' min='2' value='10' />
+    <input  id='columns-input' type='number' min='1' value='5' />
   </label>
   <label for='auto-columns'>
     Auto-set columns?

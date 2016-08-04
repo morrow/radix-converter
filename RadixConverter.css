@@ -98,7 +98,7 @@ section.current h2 {
 }
 
 table {
- margin:1em auto;
+ margin:1em auto 0 auto;
 }
 
 table input {
@@ -117,10 +117,10 @@ td {
 }
 
 .result {
- 	text-align: center;
+  text-align: center;
   margin:0 1em;
   height:1em;
-  padding:0.5em;
+  padding-bottom:0.25em;
 }
 
 .result input {

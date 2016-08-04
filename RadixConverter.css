@@ -48,7 +48,7 @@ header a:hover {
 
 [for=main-input] {
   display:block;
-  margin:1em auto;
+  margin:0.5em auto;
 }
 
 [for=columns-input]{

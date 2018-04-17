@@ -177,13 +177,13 @@ RadixConverter.prototype.createTables = function(){
     for(var i = 0; i < self.column_count; i++){
       tr_multiplier.appendChild(createTd('' + base + '<sup>' + ((self.column_count - 1) - i) + '</sup><div>×</div>'));
       if(i > 0){
-        tr_input.appendChild(createTd('&nbsp; <input type="text" />'));
+        tr_input.appendChild(createTd('<span style='opacity:0'>+</span><input type="text" />'));
       } else {
         tr_input.appendChild(createTd('<input type="text" />'));
       }
       tr_equals.appendChild(createTd('='));
       if(i > 0){
-        tr_output.appendChild(createTd('+ <input type="text" />'));
+        tr_output.appendChild(createTd('<span style='opacity:1'>+</span><input type="text" />'));
       }
       else {
         tr_output.appendChild(createTd('<input type="text" />'));

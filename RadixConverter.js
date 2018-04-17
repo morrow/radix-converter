@@ -183,7 +183,7 @@ RadixConverter.prototype.createTables = function(){
       }
       tr_equals.appendChild(createTd('='));
       if(i > 0){
-        tr_input.appendChild(createTd('<span style="opacity:1">+</span><input type="text" />'));
+        tr_output.appendChild(createTd('<span style="opacity:1">+</span><input type="text" />'));
       }
       else {
         tr_output.appendChild(createTd('<input type="text" />'));
